@@ -1,0 +1,339 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.chatbot-toggler {
+    position: fixed;
+    bottom: 30px;
+    right: 60px;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 29rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    gap: 1rem;
+    transition: all 0.2s ease;
+}
+
+.chatbot-toggler p {
+    padding: 1rem .4rem;
+    background-color: rgb(247, 246, 246);
+    margin-left: 1rem;
+    border-radius: 5rem 5rem 0 5rem;
+    margin-bottom: 3rem;
+}
+
+.chat.show-chatbot .chatbot-toggler {
+    transform: rotate(90deg);
+}
+
+.chatbot-toggler span {
+    color: #fff;
+    position: absolute;
+}
+
+.show-animation-popup {
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.show-animation-popup-ocult {
+    opacity: 1;
+    animation: showAnimation 3s ease forwards;
+    transition: all 0.9s ease;
+}
+
+@keyframes showAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.chat.show-chatbot .chatbot-toggler span:last-child {
+    opacity: 1;
+}
+
+.chatbot {
+    position: fixed;
+    right: 35px;
+    bottom: 90px;
+    width: 420px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+    transform-origin: bottom right;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+        0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease;
+}
+
+.chat.show-chatbot .chatbot {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.chatbot header {
+    padding: 16px 0;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: #CB3131;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot header span {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    display: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+header h2 {
+    font-size: 1.4rem;
+}
+
+.chatbot .chatbox {
+    overflow-y: auto;
+    height: 510px;
+    padding: 30px 20px 10px;
+}
+
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 25px;
+}
+
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
+}
+
+.chatbox .chat {
+    display: flex;
+    list-style: none;
+}
+
+.chatbox .outgoing {
+    margin: 20px 0;
+    justify-content: flex-end;
+}
+
+.chatbox .incoming span {
+    width: 5rem;
+    height: 32px;
+    color: #fff;
+    cursor: default;
+    text-align: left;
+    line-height: 32px;
+    align-self: flex-end;
+    background: #724ae8;
+    border-radius: 4px;
+    margin: 0 10px 7px 15rem;
+}
+
+.chatbox .chat p {
+    white-space: pre-wrap;
+    padding: 12px 16px;
+    border-radius: 1.5rem 0 1.5rem 1.5rem;
+    max-width: 80%;
+    font-size: 0.7rem;
+    color: #080808;
+    background-color: white;
+    border: 1px solid #d6d4dba2;
+}
+
+.chatbox .incoming p {
+    border-radius: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.chatbox .chat p.error {
+    color: #721c24;
+    background: #F1F2F4;
+}
+
+.chatbox .incoming p {
+    color: #000;
+    background: #f2f2f2;
+    border: none;
+}
+
+.chatbot .chat-input {
+    display: flex;
+    gap: 5px;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0 0 0 2rem;
+    border-top: 1px solid #ddd;
+    box-shadow: 0px -4px 17px -6px rgba(0, 0, 0, 0.479);
+}
+
+.chat-input textarea {
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    max-height: 180px;
+    padding: 15px 15px 15px 0;
+    font-size: 0.95rem;
+}
+
+.chat-input span {
+    align-self: flex-end;
+    color: #724ae8;
+    cursor: pointer;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    font-size: 1.35rem;
+}
+
+.chat-input textarea:valid~span {
+    visibility: visible;
+}
+
+@media (max-width: 490px) {
+    .chatbot-toggler {
+        right: 20px;
+        bottom: 20px;
+        width: 20rem;
+    }
+
+    .chatbot-toggler p {
+        font-size: 1rem;
+    }
+
+    .chatbot {
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .chatbot .chatbox {
+        height: 90%;
+        padding: 25px 15px 100px;
+    }
+
+    .chatbot .chat-input {
+        position: absolute;
+        padding: 5px 15px;
+    }
+
+    .chatbot header span {
+        display: block;
+    }
+}
+
+.chat-margin {
+    margin-left: 1rem;
+}
+
+
+.chatbox-paragraph-bill {
+    font-size: .8rem;
+}
+
+.chatbox-paragraph-response {
+    width: 20rem;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid rgb(209, 206, 206);
+}
+
+.chat-input-label-red {
+    background-color: #CB3131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    /* border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: -1.5rem; */
+    clip-path: ellipse(130px 140px at 10% 20%);
+}
+
+.chat-author {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid rgb(221, 217, 217);
+    color: rgb(150, 148, 148);
+}
+
+/* Boton de deslizar */
+
+.chatbot-controls {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-container {
+    display: flex;
+    flex-grow: 1;
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.control-btn {
+    flex: 0 0 auto;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.scroll-btn {
+    width: 30px;
+    height: 100%;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.scroll-btn:first-child {
+    left: 0;
+}
+
+.scroll-btn:last-child {
+    right: 0;
+}
+
+.button-container::-webkit-scrollbar {
+    display: none;
+}

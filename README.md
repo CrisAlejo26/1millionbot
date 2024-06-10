@@ -1,27 +1,35 @@
-# 1millionbot
+# Proyecto 1millionbot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+## Comando para iniciar el proyecto
 
-## Development server
+```docker
+docker-compose -f docker-compose.yml up
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Diseño Responsive
 
-## Code scaffolding
+El aplicativo es complemtamente responsive, se puede ver en varios dispositivos de la siguiente forma:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Página Principal en móvil
 
-## Build
+![Imagen pantalla principal en movil](src/assets/Movil_1.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Chatbot en móvil
 
-## Running unit tests
+![Imagen pantalla principal en movil](src/assets/Movil_2.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Página Principal en tablet
 
-## Running end-to-end tests
+![Imagen pantalla principal en movil](src/assets/Ipad_1.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Chatbot en tablet
 
-## Further help
+![Imagen pantalla principal en movil](src/assets/Ipad_2.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Página Principal en ordenador
+
+![Imagen pantalla principal en movil](src/assets/Macbook_1.png)
+
+### Chatbot en ordenador
+
+![Imagen pantalla principal en movil](src/assets/Macbook_2.png)

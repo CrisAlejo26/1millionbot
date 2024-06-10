@@ -1,0 +1,84 @@
+.seccion-demo {
+    background-color: #CC3234;
+    width: 100%;
+    height: auto;
+    padding: 5.4rem 3rem 5rem 0;
+}
+
+.seccion-demo-flex {
+    width: 70%;
+    margin: auto auto;
+}
+
+@media screen and (max-width: 575px) and (min-width: 320px) {
+    .seccion-demo {
+        padding: 4rem 0 4rem 0;
+        font-size: 2rem;
+    }
+
+    .seccion-demo-flex {
+        gap: 7rem;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    .seccion-demo {
+        width: 100%;
+        padding: 4rem 0 4rem 0;
+        font-size: 2rem;
+    }
+
+    .seccion-demo-flex {
+        width: 100%;
+        gap: 4rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .seccion-demo {
+        width: 100%;
+        padding: 4rem 0 4rem 0;
+        font-size: 2rem;
+    }
+
+    .seccion-demo-flex {
+        width: 90%;
+        gap: 4rem;
+        font-size: 1rem;
+    }
+}
+
+
+.btn-demo {
+    width: 15rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.hover-number {
+    position: absolute;
+    right: 40px;
+    top: .3rem;
+    font-size: 1.5rem;
+    transition: right 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.btn-demo:hover {
+    background-color: #143660;
+}
+
+.btn-demo:hover .hover-number {
+    right: 25px;
+    opacity: 1;
+}
