@@ -6,6 +6,8 @@
 docker-compose -f docker-compose.yml up
 ```
 
+#### Ahora se puede visualizar el proyecto en http://localhost:4200/home
+
 ### Diseño Responsive
 
 El aplicativo es complemtamente responsive, se puede ver en varios dispositivos de la siguiente forma:
